@@ -1,0 +1,35 @@
+.lizhang-header{
+	display: flex;
+	width: 750px;
+}
+.lizhang-fanhui{
+	flex: 1;
+	font-size: 36px;
+	padding: 24px 0 0 25px;
+}
+.lizhang-tab{
+	flex: 3;
+	display: flex;
+	margin-top: 4px;
+}
+.lizhang-tab li{
+	flex: 1;
+	text-align: center;
+	padding: 30px 0;
+	border-radius: 8px;
+	border: 3px solid #199ed8;
+	font-size: 30px;
+}	
+.lizhang-tab li:nth-of-type(1){
+	border-right: none;
+}
+.lizhang-reduce{
+	flex: 1;
+	font-size: 40px;
+	padding: 24px 35px 0 0;
+	text-align: right;
+}
+.lizhang-tab li:hover{
+	background: #199ed8;
+	color: #fffffa;
+}

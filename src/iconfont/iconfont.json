@@ -1,0 +1,93 @@
+{
+  "id": "1641124",
+  "name": "lishi",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6353117",
+      "name": "照片",
+      "font_class": "zhaopian",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "2066345",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "2080036",
+      "name": "账单",
+      "font_class": "zhangdan",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "7956617",
+      "name": "我 的",
+      "font_class": "wode",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "9549746",
+      "name": "添加",
+      "font_class": "tianjia1",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    },
+    {
+      "icon_id": "9570312",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10314372",
+      "name": "地点",
+      "font_class": "didian",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "10814131",
+      "name": "返回",
+      "font_class": "fanhui1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11762001",
+      "name": "三角",
+      "font_class": "sanjiao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "11775783",
+      "name": "首 页 (2)",
+      "font_class": "shouye7",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12562310",
+      "name": "待办事项",
+      "font_class": "daibanshixiang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12909899",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}
