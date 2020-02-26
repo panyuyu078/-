@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import home from './home.css';
 class Home extends Component {
+	no1(e){
+		console.log(e)
+	}
     render() {
         return ( 
         	<div>
+			
             	<div className="home_header">
 					<div className="home_header1">
 						<div>
@@ -53,7 +57,9 @@ class Home extends Component {
 							<li style={{flex:1.5}}>4500.00</li>
 							<li style={{flex:1}}></li>
 						</div>
+						
 					</div>
+					
 				</div>
             </div>
         )

@@ -1,50 +1,21 @@
 import React,{Component} from 'react';
 import lizhang from './lizhang.css';
-import {Router,Link,Route} from 'react-router-dom';
+import {Redirect,Router,Link,Route,Switch} from 'react-router-dom';
 import Home from '../home/home';
-class Lizhang extends Component(props){
+
+import Lizhchild from './lizhchild.js';
+class Lizhang extends Component{
 	constructor(props){
-		super(props)
+		super(props);
 		this.state = {
-			list:[
-				{
-					title:'收礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1500.00'
-				},
-				{
-					title:'收礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1500.00'
-				},
-				{
-					title:'收礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1500.00'
-				},
-				{
-					title:'送礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1000.00'
-				},
-				{
-					title:'送礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1000.00'
-				},
-				{
-					title:'送礼',
-					project:'项目名称',
-					name:'xxx',
-					prize:'1000.00'
-				},
-			]
+			index:0
 		}
+		this.arr=[{title:'收礼'},{title:'送礼'}]
+	}
+	changeIndex(i){
+		this.setState({
+			index:i
+		})
 	}
 	render(){
 		return(
@@ -60,24 +31,40 @@ class Lizhang extends Component(props){
 				</Link>
 				
 					<div className="lizhang-tab">
-						<Link to = "/lizhang/"><li className="active">收礼</li></Link>	
-						<Link to = "/lizhang"><li>送礼</li></Link>
 						
+						{
+							this.arr.map((value,key)=>{
+								return (
+								<Link to={`/lizhang/${value.title}`}>
+								<li key={key} onClick={this.changeIndex.bind(this,key)}
+								className={this.state.index==key?'active':''}>
+									{value.title}
+								</li>
+								</Link>
+								)
+								
+						})}
 					</div>
 					<div className="lizhang-reduce">
-						{/*设置一个动态路由，根据传入的是送礼还是收礼，渲染数据*/}
+						
 						<svg className="icon" ariaHidden="true">
 							<use xlinkHref="#icon-tianjia1">
 							</use>
 						</svg>
 					</div>
 				</div>
+				<br/>
+				<div>
+				 
+				</div>
 				<Switch>
 					<Route path='/home' component={Home}/>
-					
+					<Route path='/lizhang/:title' initlists={this.props.initlists} component={Lizhchild}/>
+					<Redirect from="/" to="/lizhang/收礼"></Redirect>
 				</Switch>	
 			</div>
 		)
 	}
 }
-export default Lizhang
+
+export default Lizhang;
