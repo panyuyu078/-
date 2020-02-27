@@ -1,5 +1,6 @@
-import {createStore} from 'redux';//按需引入
+import {createStore,combineReducers} from 'redux';//按需引入
 import lizReducer from './lizReducer';
-
-var store = createStore(lizReducer)
+import partReducer from './partReducer';
+var rootReducer = combineReducers({lizReducer,partReducer});
+var store = createStore(rootReducer)
 export default store

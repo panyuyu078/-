@@ -35,7 +35,7 @@ class Lizhang extends Component{
 						{
 							this.arr.map((value,key)=>{
 								return (
-								<Link to={`/lizhang/${value.title}`}>
+								<Link key={key} to={`/lizhang/${value.title}`}>
 								<li key={key} onClick={this.changeIndex.bind(this,key)}
 								className={this.state.index==key?'active':''}>
 									{value.title}
@@ -46,7 +46,6 @@ class Lizhang extends Component{
 						})}
 					</div>
 					<div className="lizhang-reduce">
-						
 						<svg className="icon" ariaHidden="true">
 							<use xlinkHref="#icon-tianjia1">
 							</use>
@@ -55,7 +54,6 @@ class Lizhang extends Component{
 				</div>
 				<br/>
 				<div>
-				 
 				</div>
 				<Switch>
 					<Route path='/home' component={Home}/>

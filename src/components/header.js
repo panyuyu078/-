@@ -7,7 +7,6 @@ import Mine from './mine/mine.js';
 class Header extends Component {
 	render(){
 		return(
-		
 			<div className = "Appfooter">
 				<Link to = "/home">
 				<div className="li">
@@ -69,10 +68,8 @@ class Header extends Component {
 				<Route exact path='/mine' component={Mine}/>
 				<Redirect from="/" to="/Home"></Redirect>
 			</Switch>
-				
 			</div>
 			</div>
-			
 		)
 	}
 }

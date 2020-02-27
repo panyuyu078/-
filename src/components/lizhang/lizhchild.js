@@ -9,7 +9,7 @@ class Lizhchild extends Component {
 	render(){
 		return(
 		<div>
-		123{this.props.match.params.title}
+		参数:{this.props.match.params.title}
 		
 		{this.props.initlists.map((ele,index)=>{
 			return (
@@ -32,9 +32,8 @@ class Lizhchild extends Component {
 	
 }
 const mapStateToProps = state => {
-	console.log(state)
 	return {
-		initlists:state
+		initlists:state.lizReducer
 	};
 };
 const mapDispatchToProps = dispatch =>{

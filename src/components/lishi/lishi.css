@@ -1,18 +1,18 @@
-.lizhang-header{
+.lishi-header{
 	display: flex;
 	width: 750px;
 }
-.lizhang-fanhui{
+.lishi-fanhui{
 	flex: 1;
 	font-size: 36px;
 	padding: 24px 0 0 25px;
 }
-.lizhang-tab{
+.lishi-tab{
 	flex: 3;
 	display: flex;
 	margin-top: 4px;
 }
-.lizhang-tab li{
+.lishi-tab li{
 	flex: 1;
 	text-align: center;
 	padding: 30px 0;
@@ -21,17 +21,18 @@
 	font-size: 30px;
 	color: #199ed8;
 }
-.lizhang-reduce{
+
+.lishi-reduce{
 	flex: 1;
 	font-size: 40px;
 	padding: 24px 35px 0 0;
 	text-align: right;
 }
-.lizhang-tab li.active{
+.lishi-tab li.active{
 	background: #199ed8;
 	color: #fffffa;
 }
-.lizhang-ele{
+.lishi-ele{
 	font-size: 32px;
 	padding:20px;
 }

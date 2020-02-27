@@ -18,6 +18,30 @@ var initlists = [
 		prize:'1500.00'
 	},
 	{
+		title:'收礼',
+		project:'项目名称',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'收礼',
+		project:'项目名称',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'送礼',
+		project:'项目名称',
+		name:'xxx',
+		prize:'1000.00'
+	},
+	{
+		title:'送礼',
+		project:'项目名称',
+		name:'xxx',
+		prize:'1000.00'
+	},
+	{
 		title:'送礼',
 		project:'项目名称',
 		name:'xxx',
