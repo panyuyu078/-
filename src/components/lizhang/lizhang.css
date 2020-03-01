@@ -35,6 +35,46 @@
 	font-size: 32px;
 	padding:20px;
 }
+.lizhang-denglu{
+	width: 80px;
+	font-size: 28px;
+	position: fixed;
+	right: -15px;
+	top:15px;
+	display: none;
+	}
+.qw{
+	width:80%;
+	height: 360px;
+	position: fixed;
+	top:30%;
+	margin-left: 10%;
+	background: #DDDDDD;
+	display: none;
+}	
+.qwImg{
+	width: 100%;
+	padding: 5;
+	display: flex;
+}
+.qwtext{
+	width: 100%;
+	display: flex;
+}
+.qwtext div{
+	flex: 1;
+	text-align: center;
+}	
+.qw img{
+	flex: 1;
+	height: 250px;
+	margin: 5px;
+}
+.qwclose{
+	font-size: 36px;
+	float: right;
+	margin-right: 10px;
+}
 .clearfix:after {
 		/*伪元素是行内元素 正常浏览器清除浮动方法*/
 		content: "";

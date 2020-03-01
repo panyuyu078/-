@@ -4,6 +4,7 @@ import Home from './home/home.js';
 import Lishi from './lishi/lishi.js';
 import Lizhang from './lizhang/lizhang.js';
 import Mine from './mine/mine.js';
+import Register from './lizhang/register.js';
 class Header extends Component {
 	render(){
 		return(
@@ -66,6 +67,7 @@ class Header extends Component {
 				<Route path='/lishi' component={Lishi}/>
 				<Route path='/lizhang' component={Lizhang}/>
 				<Route exact path='/mine' component={Mine}/>
+				<Route exact path='/register' component={Register}/>
 				<Redirect from="/" to="/Home"></Redirect>
 			</Switch>
 			</div>

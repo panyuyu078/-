@@ -61,5 +61,6 @@ var initlists = [
 	},
 ]
 export default function(state = initlists,action){
+	// 写add情况
 	return state
 }
