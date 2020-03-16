@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import lizhang from './lizhang.css';
+import './lizhang.css';
 import {Redirect,Router,Link,Route,Switch} from 'react-router-dom';
 import Home from '../home/home';
+import Header from '../header';
 import Register from './register';
 import Registerchild from './registerChild';
 import Lizhchild from './lizhchild.js';
@@ -19,6 +20,9 @@ class Lizhang extends Component{
 			index:i
 		})
 	}
+	changefanhui(){
+		this.props.history.replace('/')
+	}
 	changedisplay(){
 		this.lizhangDenglu.style.display="block"
 	}
@@ -32,22 +36,19 @@ class Lizhang extends Component{
 		return(
 			<div className="lizhang">
 				<div className="lizhang-header">
-				<Link to = "/home">
-					<div className="lizhang-fanhui">
-						<svg className="icon" ariaHidden="true">
+					<div className="lizhang-fanhui" onClick={this.changefanhui.bind(this)}>
+						<svg className="icon">
 							<use xlinkHref="#icon-fanhui1">
 							</use>
 						</svg>
 					</div>
-				</Link>
 				
 					<div className="lizhang-tab">
 						{
 							this.arr.map((value,key)=>{
 								return (
-								<Link key={key} to={`/lizhang/${value.title}`}>
-								<li key={key} onClick={this.changeIndex.bind(this,key)}
-								className={this.state.index==key?'active':''}>
+								<Link key={key} to={`/lizhang/${value.title}`} className={this.state.index==key?'active':''}>
+								<li key={key} onClick={this.changeIndex.bind(this,key)}>
 									{value.title}
 								</li>
 								</Link>
@@ -56,7 +57,7 @@ class Lizhang extends Component{
 						})}
 					</div>
 					<div className="lizhang-reduce" onClick={this.changedisplay.bind(this)}>
-						<svg className="icon" ariaHidden="true">
+						<svg className="icon">
 							<use xlinkHref="#icon-tianjia1">
 							</use>
 						</svg>
@@ -65,6 +66,7 @@ class Lizhang extends Component{
 						(n)=>{
 							this.lizhangDenglu = n
 						}}>
+						{/*跳转到登录界面*/}
 						<Link to='/register'><button>已登录</button></Link>
 						<button onClick={this.handlewei.bind(this)}>未登录</button>
 					</div>
@@ -84,13 +86,10 @@ class Lizhang extends Component{
 						<div>微信登录</div>
 					</div>
 				</div>
-				<Switch>
-					<Route path='/home' component={Home}/>
-					<Route path='/lizhang/:title' initlists={this.props.initlists} component={Lizhchild}/>
-					<Route path='/register' component={Register}/>
-					<Route path='/register/:title' component={Registerchild}/>
-					<Redirect from="/" to="/lizhang/收礼"></Redirect>
-				</Switch>	
+				{/*收礼*/}
+				<Route path="/lizhang/:title" component={Lizhchild}/>
+				<Redirect to="/lizhang/收礼"></Redirect>
+				<Header></Header>
 			</div>
 		)
 	}

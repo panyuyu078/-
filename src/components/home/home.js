@@ -1,90 +1,60 @@
 import React, { Component } from 'react';
-import home from './home.css';
-class Home extends Component {
-	constructor(){
-		super();
-		this.homeArr=[
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-			{
-				rank:1,
-				name:'JAMES刘',
-				history:'95685.00',
-				dangyue:'4500.00'
-			},
-		]
+import {Redirect,Route,Link,Switch} from 'react-router-dom';
+import './home.css';
+import Header from '../header';
+import rankdata from './rank.json';
+
+export default class Home extends Component {
+	constructor(props,context){
+		super(props,context);
+		this.num = 0
 	}
     render() {
+		let rankData = rankdata.sort((a,b)=>{
+								if(a.history == b.history){
+									return a.shoru-b.shoru
+								}else{
+									return a.history-b.history
+								}
+								
+							});
         return ( 
         	<div>
-			
             	<div className="home_header">
-					<div className="home_header1">
-						<div>
-							<li>历史收礼</li>
-							<li>5500</li>
-						</div>
-						<div>
-							<li>6月收礼</li>
-							<li>5500</li>
-						</div>
-					</div>
-					<div className="home_header1">
-						<div>
-							<li>历史盈亏</li>
-							<li>2948</li>
-						</div>
-						<div>
-							<div className="home_blue">
-								<li>本月盈亏</li>
-								<li>2948</li>
-							</div>
-						</div>
-					</div>
-					<div className="home_header1">
-						<div>
-							<li>历史送礼</li>
-							<li>2500</li>
-						</div>
-						<div>
-							<li>6月送礼</li>
-							<li>2500</li>
-						</div>
-					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									历史收礼<br/>
+									5500
+								</td>
+								<td className="historyyk">
+									历史盈亏<br/>
+									2948
+								</td>
+								<td>
+									历史送礼<br/>
+									2500
+								</td>
+							</tr>
+							<tr>
+							</tr>
+							<tr>
+								<td>
+									6月收礼<br/>
+									5500
+								</td>
+								<td className="benyueyk">
+									本月盈亏<br/>
+									2948
+								</td>
+								<td>
+									6月送礼<br/>
+									2500
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div> 
 				<div className="home-content">
 					<div className="home-title">
@@ -92,25 +62,29 @@ class Home extends Component {
 						<li style={{flex:1.5}}>用户</li>
 						<li style={{flex:1.5}}>历史盈亏</li>
 						<li style={{flex:1.5}}>本月盈亏</li>
-						<li style={{flex:1}}>更多</li>
+						<li style={{flex:1}}>
+						<Link to='/home/rank'>更多</Link>
+						</li>
 					</div>	
-						{/*数据循环的地方*/}
+						{/*数据循环*/}
 						{
-							this.homeArr.map((ele,index)=>{
+							rankData.map((ele,index)=>{
 								return (
-									<div className="home-content"  key={index}>
-										<li style={{flex:1}}>{ele.rank}</li>
-										<li style={{flex:1.5}}>{ele.name}</li>
+									<div key={index}>
+										<li style={{flex:1}}>{++this.num}</li>
+										<li style={{flex:1.5}}>{ele.user}</li>
 										<li style={{flex:1.5}}>{ele.history}</li>
-										<li style={{flex:1.5}}>{ele.dangyue}</li>
+										<li style={{flex:1.5}}>{ele.benyue}</li>
 										<li style={{flex:1}}></li>
 									</div>
 								)
 							})
 						}
 				</div>
+				<Header></Header>
+					
             </div>
+			
         )
     }
 }
-export default Home;

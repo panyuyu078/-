@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import 'lib-flexible';
-import * as serviceWorker from './serviceWorker';
+import Route from './routes';
 import store from './store/store.js';
 import {Provider} from 'react-redux';
-ReactDOM.render(
+import 'lib-flexible';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render((
 <Provider store={store}>
-<App />
-</Provider>
+	<div className="App">
+		<Route/>
+	</div>
+</Provider>)
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

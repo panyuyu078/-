@@ -1,8 +1,30 @@
 .home_header{
-	width: 750px;
-	padding:75px 0 126px 0;
-	display: flex;
+	width: 100%;
 	background: #e4e4e4;
+	padding: 70px 0;
+}
+.home_header table{
+	width: 100%;
+}
+.home_header tr{
+	padding-bottom: 20px;
+}
+.home_header table td{
+	text-align: center;
+}
+.historyyk{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: #CCCCCC;
+	color: #fff;
+}
+.benyueyk{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: #199ed8;
+	color: #fff;
 }
 .home_header1{
 	flex:1;
@@ -21,6 +43,9 @@
 	font-weight: bold;
 	font-size: 28px;
 }
+.home-title a{
+	cursor: pointer;
+}
 .home-content div{
 	width: 100%;
 	display: flex;
@@ -31,4 +56,37 @@
 .home-content div li{
 	padding: 15px 0;
 	box-sizing: border-box;
+}
+.more-header{
+	width: 100%;
+	display: flex;
+	padding:14px 0 10px 14px;
+}
+.more-fanhui{
+	flex: 1;
+}	
+.more-fanhui svg{
+	height: 25px;
+}
+.more-title{
+	flex:9;
+	text-align:center;
+	font-size: 30px;
+	font-weight: bold;
+}
+.more-banner{
+	width: 100%;
+	display: flex;
+}
+.more-banner li{
+	flex: 1;
+	padding:18px 0;
+	text-align: center;
+	background: #f0f8fa;
+	color: #333333;
+	border-left: 1px solid #cccccc;
+	cursor: pointer;
+}	
+.more-banner li.active{
+	background: #d0d8da;
 }

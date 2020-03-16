@@ -1,0 +1,74 @@
+#manage {
+  min-height: 2380px;
+  background-color: rgba(242, 242, 242, 1);
+  .m-hd {
+    margin-bottom: 50px;
+    .am-navbar {
+      height: 200px;
+      background-color: red;
+    }
+    .am-navbar-left-icon {
+      font-size: 5555px;
+    }
+    .am-navbar-title a {
+      width: 300px;
+      height: 150px;
+      line-height: 150px;
+      margin-right: 150px;
+    }
+    .am-navbar-title a:last-child {
+      background-color: transparent;
+      border-color: blue;
+    }
+  }
+  .m-nav-con {
+    .m-nav {
+      $h: 200px;
+      display: flex;
+      background-color: #ffffff;
+      min-height: $h;
+      margin-bottom: 50px;
+      .u-type,
+      .u-time,
+      .u-money {
+        flex: 1;
+        text-align: center;
+        font: bold 55px/200px arial;
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 48px;
+          border-color: transparent;
+          border-top-color: #ccc;
+          position: relative;
+          top: 50px;
+          left: 60px;
+        }
+      }
+    }
+    .m-infoType,.m-infoMoney{
+        ul{
+            padding: 40px 0;
+            overflow: hidden;
+            li{
+                text-align: center;
+                font:bold 70px/100px arial;
+                margin: 30px 0 0 0;
+                background-color: #ffffff;
+                padding: 20px 0;
+                border-bottom: 1px solid black;
+            }
+            li:last-child{
+                border: none;
+            }
+        }
+        
+    }
+    .am-button{
+        height: 100px;
+        line-height: 100px;
+    }
+  }
+}

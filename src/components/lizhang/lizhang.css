@@ -3,6 +3,7 @@
 	width: 750px;
 }
 .lizhang-fanhui{
+	display: block;
 	flex: 1;
 	font-size: 36px;
 	padding: 24px 0 0 25px;
@@ -12,7 +13,8 @@
 	display: flex;
 	margin-top: 4px;
 }
-.lizhang-tab li{
+.lizhang-tab a{
+	display: block;
 	flex: 1;
 	text-align: center;
 	padding: 30px 0;
@@ -27,7 +29,7 @@
 	padding: 24px 35px 0 0;
 	text-align: right;
 }
-.lizhang-tab li.active{
+.lizhang-tab a.active{
 	background: #199ed8;
 	color: #fffffa;
 }
@@ -75,6 +77,127 @@
 	float: right;
 	margin-right: 10px;
 }
+#registerChild .lizhang-tab{
+	margin-left: 50px;
+}
+.registerSpan,.registerInput{
+	color: #199ed8;
+	font-weight: bold;
+	font-size: 50px;
+	margin-left: 22px;
+	line-height: 80px;
+}
+.registerInput{
+	outline: none;
+	border: none;
+}
+.registerDiv{
+	min-height: 180px;
+	padding:10px;
+	font-size: 30px;
+	border-top: 2px solid #DDDDDD;
+	border-bottom: 2px solid #DDDDDD;
+	outline: none;
+}
+.registerDate{
+	padding: 10px;
+}
+.registerDate svg{
+	margin-right: 5px;
+	width: 60px;
+	height: 30px;
+}
+.registerDate span{
+	font-size: 30px;
+}
+.registerJia span{
+	display: inline-block;
+	border: 1px solid #949494;
+	text-align: center;
+	line-height: 37px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #949494;
+}
+.registerJia{
+	font-size: 40px;
+	background: #DDDDDD;
+	text-align: center;
+	line-height: 84px;
+}
+.typeDiv{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom:-360px;
+	transition: .5s;
+	z-index: 2;
+	background: #fff;
+}
+.typeLi{
+	font-size: 30px;
+	border-bottom: 1px solid #BCBCBC;
+	text-align: center;
+	padding: 10px 0;
+	height:60px;
+	box-sizing: border-box;
+}
+.tijiao{
+	width: 100%;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #199ed8;
+}
+.tijiaoDiv{
+	width: 100%;
+	height:80px;
+	position: fixed;
+	left: 0;
+	bottom:-100px;
+	transition: .5s;
+	z-index: 2;
+	background: #fff;
+}
+.tijiaoDiv input{
+	width: 80%;
+	height:80px;
+	font-size: 30px;
+}
+.tijiaoDiv button{
+	width: 15%;
+	height:80px;
+}
+.lizhchildTab{
+	display: flex;
+}
+.lizhchildTab li{
+	flex: 1;
+	text-align: center;
+}
+.lizhType,.lizhMoney{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	left: 0;
+	top: 206px;
+	background: #fff;
+}
+.lizhType li,.lizhMoney li{
+	border-bottom: 1px solid #ccc;
+	font-size: 24px;
+	padding:5px 0;
+	line-height: 42px;
+	text-align: center;
+	background: #fff;
+}
+
 .clearfix:after {
 		/*伪元素是行内元素 正常浏览器清除浮动方法*/
 		content: "";

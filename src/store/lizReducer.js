@@ -1,7 +1,31 @@
 var initlists = [
 	{
 		title:'收礼',
-		project:'项目名称',
+		project:'结婚收礼',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'收礼',
+		project:'结婚收礼',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'收礼',
+		project:'搬家收礼',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'收礼',
+		project:'诞辰收礼',
+		name:'xxx',
+		prize:'1500.00'
+	},
+	{
+		title:'收礼',
+		project:'满月收礼',
 		name:'xxx',
 		prize:'1500.00'
 	},
@@ -12,55 +36,46 @@ var initlists = [
 		prize:'1500.00'
 	},
 	{
-		title:'收礼',
-		project:'项目名称',
-		name:'xxx',
-		prize:'1500.00'
-	},
-	{
-		title:'收礼',
-		project:'项目名称',
-		name:'xxx',
-		prize:'1500.00'
-	},
-	{
-		title:'收礼',
-		project:'项目名称',
-		name:'xxx',
-		prize:'1500.00'
-	},
-	{
 		title:'送礼',
-		project:'项目名称',
+		project:'寿宴收礼',
 		name:'xxx',
 		prize:'1000.00'
 	},
 	{
 		title:'送礼',
-		project:'项目名称',
+		project:'升学收礼',
 		name:'xxx',
 		prize:'1000.00'
 	},
 	{
 		title:'送礼',
-		project:'项目名称',
+		project:'结婚收礼',
 		name:'xxx',
 		prize:'1000.00'
 	},
 	{
 		title:'送礼',
-		project:'项目名称',
+		project:'搬家收礼',
 		name:'xxx',
 		prize:'1000.00'
 	},
 	{
 		title:'送礼',
-		project:'项目名称',
+		project:'诞辰收礼',
 		name:'xxx',
 		prize:'1000.00'
 	},
 ]
 export default function(state = initlists,action){
 	// 写add情况
+	console.log(action,'action')
+	console.log(state)
+	switch(action.type){
+		case 'add':
+		return [...state,action.addValue]
+		break;
+		default: return state
+		break
+	}
 	return state
 }

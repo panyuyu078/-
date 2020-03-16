@@ -2,17 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
-import {BrowserRouter,Redirect,Route,Link,Switch} from 'react-router-dom';
+import store from './store/store.js';
+import {Provider} from 'react-redux';
 
 function App() {
 	return(
-		<BrowserRouter>
-			<div className="App">
-				<Header/>
-				
-			</div>		
-		</BrowserRouter>
-		
+	<Provider store={store}>
+		<div className="App" style={{paddingBottom:'100px'}}>
+			<Header/>
+		</div>
+	</Provider>
 	);
 }
 

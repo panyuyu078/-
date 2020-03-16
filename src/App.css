@@ -4,7 +4,10 @@
     text-decoration: none;
 	list-style: none;
 }
-
+.App {
+	padding-bottom: 100px;
+	background: red;
+}
 .Appfooter {
     width: 100%;
     display: flex;

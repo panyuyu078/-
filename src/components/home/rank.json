@@ -1,0 +1,38 @@
+[
+	{
+		"user":"JAMES 刘",
+		"history":"95685",
+		"benyue":"4500",
+		"shoru":"12000"
+	},
+	{
+		"user":"JAMES 张",
+		"history":"100000",
+		"benyue":"7200",
+		"shoru":"15000"
+	},
+	{
+		"user":"JAMES 潘",
+		"history":"120000",
+		"benyue":"8200",
+		"shoru":"13000"
+	},
+	{
+		"user":"JAMES 赵",
+		"history":"85685",
+		"benyue":"4500",
+		"shoru":"12050"
+	},
+	{
+		"user":"JAMES 牛",
+		"history":"100000",
+		"benyue":"17200",
+		"shoru":"15000"
+	},
+	{
+		"user":"JAMES 王",
+		"history":"120000",
+		"benyue":"8200",
+		"shoru":"20000"
+	}
+]

@@ -1,10 +1,5 @@
 import React,{Component} from 'react';
 import {Redirect,Route,Link,Switch} from 'react-router-dom';
-import Home from './home/home.js';
-import Lishi from './lishi/lishi.js';
-import Lizhang from './lizhang/lizhang.js';
-import Mine from './mine/mine.js';
-import Register from './lizhang/register.js';
 class Header extends Component {
 	render(){
 		return(
@@ -12,7 +7,7 @@ class Header extends Component {
 				<Link to = "/home">
 				<div className="li">
 					<p>
-						<svg className="icon" ariaHidden="true">
+						<svg className="icon">
 							<use xlinkHref="#icon-shouye7">
 							</use>
 						</svg>
@@ -23,7 +18,7 @@ class Header extends Component {
 			<Link to = "/lizhang">
 				<div className="li">
 					<p>
-						<svg className="icon" ariaHidden="true">
+						<svg className="icon">
 							<use xlinkHref="#icon-zhangdan">
 							</use>
 						</svg>
@@ -33,7 +28,7 @@ class Header extends Component {
 			</Link>	
 			<Link to = "/home">
 				<div className="li">
-					<svg className="icon" ariaHidden="true">
+					<svg className="icon">
 						<use xlinkHref="#icon-tianjia1">
 							</use>
 					</svg>
@@ -42,7 +37,7 @@ class Header extends Component {
 			<Link to = "/lishi">	
 				<div className="li">
 					<p>
-						<svg className="icon" ariaHidden="true">
+						<svg className="icon">
 							<use xlinkHref="#icon-daibanshixiang">
 							</use>
 						</svg>
@@ -53,7 +48,7 @@ class Header extends Component {
 			<Link to = "/mine">
 				<div className="li">
 					<p>
-						<svg className="icon" ariaHidden="true">
+						<svg className="icon">
 							<use xlinkHref="#icon-wode">
 							</use>
 						</svg>
@@ -61,16 +56,6 @@ class Header extends Component {
 					<p> 我的 </p>
 				</div>
 			</Link>
-			<div className="Appcontent">
-			<Switch>
-				<Route path='/home' component={Home}/>
-				<Route path='/lishi' component={Lishi}/>
-				<Route path='/lizhang' component={Lizhang}/>
-				<Route exact path='/mine' component={Mine}/>
-				<Route exact path='/register' component={Register}/>
-				<Redirect from="/" to="/Home"></Redirect>
-			</Switch>
-			</div>
 			</div>
 		)
 	}

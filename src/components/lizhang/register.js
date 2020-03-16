@@ -17,34 +17,41 @@ class Register extends Component{
 			index:i
 		})
 	}
+	
 	render(){
 		return(
 			<div>
-				<div className="lizhang-header">
+			<div className="lizhang-header">
+				<div className="lizhang-fanhui">
 				<Link to = "/lizhang">
-					<div className="lizhang-fanhui">
-						<svg className="icon" ariaHidden="true">
-							<use xlinkHref="#icon-fanhui1">
-							</use>
-						</svg>
-					</div>
+					<svg className="icon">
+						<use xlinkHref="#icon-fanhui1">
+						</use>
+					</svg>
 				</Link>
-				
-					<div className="lizhang-tab">
-						{
-							this.arr.map((value,key)=>{
-								return (
-								<Link key={key} to={`/register/${value.title}`}>
-								<li key={key} onClick={this.changeIndex.bind(this,key)}
-								className={this.state.index==key?'active':''}>
-									{value.title}
-								</li>
-								</Link>
-								)
-								
-						})}
-					</div>
-				</div>	
+				</div>
+				<div className="lizhang-tab">
+					{
+						this.arr.map((value,key)=>{
+							return (
+							<Link key={key} to={`/register/${value.title}`} className={this.state.index==key?'active':''}>
+							<li key={key} onClick={this.changeIndex.bind(this,key)}>
+								{value.title}
+							</li>
+							</Link>
+							)
+							
+					})}
+				</div>
+				<div className="lizhang-reduce" >
+				</div>
+				<div className="lizhang-denglu" ref={
+					(n)=>{
+						this.lizhangDenglu = n
+					}}>
+					
+				</div>
+			</div>
 				<Switch>
 					<Route path='/lizhang' component={Lizhang}/>
 					<Route path='/register/:title' component={Registerchild}/>
